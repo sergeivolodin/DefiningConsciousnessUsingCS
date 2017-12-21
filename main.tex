@@ -1,8 +1,9 @@
 \documentclass[a4paper]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
+\usepackage{graphicx}
 %opening
-\title{Philosophy of Life Sciences. Essay}
+\title{Philosophy of Life Sciences.\\ On Reinfocement Learning and Compatibilism}
 \author{Sergei Volodin, EPFL MSc student}
 \date{}
 
@@ -11,42 +12,38 @@
 \maketitle
 
 \begin{abstract}
-This essay claims that Free Will exists by linking human behavior with Reinforcement Learning framework and proving existence of free will inside that framework
+Two seemingly unrelated concepts are considered, namely, Reinfocement Learning and Compatibilism. This paper claims that a new emerging paradigm in Artificial Intelligence, namely, Reinforcement Learning, can answer a question on whether or not free will is compatible with determinism (also known as compatibilism).
+First, human behavior are linked with Reinforcement Learning paradigm using recent studies in Computer Science and Neuroscience.
+After that, human behavior is analyzed in the RL framework and 
 \end{abstract}
 
 \section{Introduction}
-{\bf Claim:} free will can exist since human behavior fits Reinforcement Learning model, which supports free will in terms of random input for an algorithm
+Free will is a philosophical concept stating that humans can choose between possible actions in a particular situation \cite{freewillst}.
 
-The steps are the following:
-\begin{enumerate}
-	\item What is Free Will?
-	\item What is Reinforcement Learning?
-	\item Why does human behavior fit Reinforcement Learning paradigm?
-	\item If so, how can free will exist if actions of humans can be predicted (randomness) $\rightarrow$ incompatibility of free will and determinism (free will requires randomness)
-	\item Why does Reinforcement Learning admit Free Will?
-	\item Conclusion (free will)
-\end{enumerate}
+Reinforcement learning is a subfield of Machine Learning and Artificial Intelligence considering two entities: the {\em agent} and the {\em environment}. {\em Agent} is taking {\em actions} inside the {\em environment}, and the {\em environment} sends this agent back {\em observations}, which are states of the environment and {\em rewards}, which are numbers indicating how well the agent performs \cite{sutton}.
 
-Free will is a philosophical concept stating that humans can take decisions not considering data as previous experience or impediments.
+\begin{figure}[h]
+	\caption{Reinforcement Learning diagram}
+	\centering \includegraphics[width=150px]{RL.png}
+	\label{RL}
+\end{figure}
 
+Recent studies in Neuroscience suggest that the brain of mammals, such as mice and monkeys, uses concepts of Reinforcement Learning in its inner processing to generate action \cite{doyareward, doya2}. Thus, it is plausible to assume that such a framework is also used in humans.
 
-Reinforcement learning is a subfield of Machine Learning and Artificial Intelligence aimed at replicating behavior of an agent in an environment \cite{sutton}
+First problem that this essay will address is the seemingly impossible existence of free will under this assumption. If the actions of humans can be explained by a mathematical model, if not in each case, then on average, how can humans might have free will? It shall be shown that reinforcement learning action selection requires randomness in most cases. For example, when choosing exploration or exploitation strategy, most of the agents use a source of random bits. This randomness can come from both of the two entities.
 
-Suppose that we live in a world where AGI exists, or, at least, human actions can be explained using RL.
-Now it is able to explain actions of simple mammals such as mice \cite{oist}.
+If the randomness comes from the environment, then, in a deterministic world learning would not be possible, meaning that there exist environments for which a randomness-equipped agent can solve, when a deterministic agent cannot.
 
-The problem with free will would be that RL might seem to be able to explain human behaviour and actions humans take, if not in each case, then on average.
+On the other hand, if the randomness does not come from the environment itself, it can come from inside the agent, meaning that it is the agent who takes decisions of whether or not to explore. This case is exactly considered as free will. It is interpreted as follows: given two equally rewarding options to decide between, $a$ and $b$, and a action-value function $Q(s, a)=Q(s, b)$, the agent himself can choose which action to take, irregardless of the environment, by generating one bit using free will.
 
-In this case, even if Free Will does not seem to exist (one of the explanations would be that algorithms need random input, each bit of them can be interpreted as free will decision -- but this idea needs further elaboration since not all algorithms require such data)
+However, in this case the environment cannot be deterministic, since human mind is part of it, and it can generate random bits. Thus, we obtain incompatibilism in this case.
 
-Isn't randomness implies negation of free will?
-If non-determinism is true, than we certainly prove that actions of humans can be random $\rightarrow$ incompatibility
-
-RL agents and consciousness \cite{rlmorality1}, \cite{rlmorality2}
-
-Thus, we will show that free will can exist if we prove that RL indeed fit human behavior.
+Finally, this paper argues that the latter case is true. RL agents and consciousness \cite{rlmorality1}, \cite{rlmorality2}
 
 \begin{thebibliography}{20}
+\bibitem{freewillst} \url{https://plato.stanford.edu/entries/freewill/}
+\bibitem{doyareward} Kazuyuki Samejima1, Yasumasa Ueda, Kenji Doya1, Minoru Kimura. Representation of Action-Specific Reward Values in the Striatum
+\bibitem{doya2} K. Doya. What are the computations of the cerebellum, the basal ganglia and the cerebral cortex?
 \bibitem{sutton} Richard S. Sutton and Andrew G. Barto. 1998. Introduction to Reinforcement Learning (1st ed.). MIT Press, Cambridge, MA, USA.
 \bibitem{oist} \url{https://groups.oist.jp/ncu} (late 2010s)
 \bibitem{freewillrl} Kenneth T. Kishida. A computational approach to “free will” constrained by the games we play
