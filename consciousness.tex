@@ -1,5 +1,6 @@
-\documentclass[a4paper]{article}
-\usepackage[margin=1in]{geometry}
+\documentclass[a4paper, 12pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\renewcommand{\baselinestretch}{1.5}
 \usepackage{hyperref}
 \usepackage{graphicx}
 %opening
@@ -17,6 +18,8 @@ Despite this enormous efforts, the definition seemed to slip through our fingers
 On the other hand, during the past fifty years, a number of significant breakthroughs in Artificial Intelligence allowed to answer a few questions about what consciousness {\em is not}.
 Another part of these breakthroughs is the Integrated information theory, which gives a set of necessary properties required for a physical system to be conscious.
 \end{abstract}
+
+\tableofcontents
 
 \section{Introduction}
 Plan:\begin{enumerate}
@@ -36,6 +39,10 @@ Plan:\begin{enumerate}
 \item Question: 1 bit input to consciousness. Can a creature be conscious? Argue that yes. Use different definitions to support this claim
 \end{enumerate}
 In this (part of an) essay the existence of an artificial consciousness is being proven. The main problem of answering to this question is that there is no consensus on what a natural consciousness is. Various definitions of consciousness based on recent breakthroughs in Artificial Intelligence are used.
+
+\href{https://docs.google.com/document/d/1kh4wC9YHNJEcCBxE1eaymw9PPa1VdCW25BH0GEIQgj4/edit#heading=h.ptmcnj925n6h}{Annotated bibliography on Drive}
+
+{\bf Below: list of possible ideas}
 
 Assumptions:
 1. World has a lot of problems
@@ -69,34 +76,11 @@ All of the human qualities can be imitated. Does it make the creature intelligen
 
 How can I choose something with consciousness without using words? How does it encode choice indices? What is the maximal \#choices?
 
-%Free will is a philosophical concept stating that humans can choose between possible actions in a particular situation \cite{freewillst}. This notion has two possible views linked to it. First one states that free will does not exist, which means that actions of humans are not determined by themselves and no other action could have been taken rather than the one that actually happened. Second view states that free will exists. In any particular situation, regardless of the previous events, other action could have been chosen rather than the one that actually was.
+Can have qualia of 1 bit?
+Turing test: only behavior. Allows for a philosophical zombie.
 
-%Determinism \cite{determinismst} is the notion of events in the world being {\em caused} only by the previous ones, and not by anything else. In other words, if the world was in one particular state in the first moment of time $t_1$, it could only be in one state in the second moment of time $t_2>t_1$, and this state depends only on previous state.
-
-%Free will and determinism are often contrasted in a mutually exclusive manner. This idea is called Incompatibilism \cite{compatibilismst}. It claims that if there exist free will, the world cannot be deterministic, and vice versa. The opposite view is called compatibilism which states that these two concepts can be true together.
-
-%Reinforcement learning is a subfield of Machine Learning and Artificial Intelligence considering two entities: the {\em agent} and the {\em environment}. {\em Agent} is taking {\em actions} inside the {\em environment}, and the {\em environment} sends this agent back {\em observations}, which are states of the environment and {\em rewards}, which are numbers indicating how well the agent performs \cite{sutton}.
-
-% 	\begin{figure}[h] \caption{Reinforcement Learning diagram} \centering \includegraphics[width=150px]{RL.png} \label{RL}\end{figure}
-
-%Recent studies in Neuroscience suggest that the brain of mammals, such as mice and monkeys, actually has structures in it which resemble parts of the Reinforcement Learning algorithms in its inner processing to generate actions \cite{doyareward, doya2}. Thus, it is plausible to assume that such a framework is also used in humans. Moreover, a philosophical view on Reinfocement Learning suggests that RL agents are no different from animals in terms of behavior, and, thus, might be considered conscious to some extent \cite{rlmorality1, rlmorality2}. When linking the reinfocement learning framework to human-world interaction, we will assume that humans possess Artificial General Intelligence \cite{shane}, meaning that a human can solve {\em any} task, if given enough time to do it. If the task can be solved in a finite time $t$, but not during the lifetime ($t>T$), we do not consider such a task.
-
-%First problem that this essay will address is the seemingly impossible existence of free will under the assumption of applicability of RL to humans. If the actions of humans can be explained by a mathematical model, if not in each case, then on average, how can humans might have free will? It shall be shown that reinforcement learning action selection requires randomness in most cases. For example, when choosing exploration or exploitation strategy \cite{sutton}, most of the agents use a source of random bits. Thus, a reinforcement learning algorithm does not depend solely on the observations and rewards given by the environment. It means that, given a history of interaction between environment and the agent to two different agents of the same type, they {\em can} produce different actions for the next input from the environment.
-
-%This randomness can come from both of the two entities, from the agent, and from the environment. If the randomness comes from the environment, then, in a deterministic world learning as we know it would not be possible, meaning that there would exist real-world situations which a randomness-equipped agent can solve, when a deterministic agent cannot. In this paragraph, learning denotes the ability of the agent to begin to act in a way to obtain maximal reward after some time of training.
-
-%An example of such situation would be the following. Consider an environment with two possible actions, for example, choosing a restaurant A or B. They have different menus and each of them has a certain amount of satisfaction (reward) associated to it. At the beginning the menus are the same, but at time steps $t$ in $t_1,...,t_n$ the restaurant B changes the menu and it now has higher reward associated to it (is more satisfactory). Suppose now that we have an agent who only chosen the A, and never took B. Regardless of the inner design of the agent, we can take into account the very first time he chooses the option B at $t'$. If $t'$ is not one of $t_1,...,t_n$, then he wouldn't see the difference at all, thus, he will never know that the restaurant B is better for him.
-
-%Continuing in this manner, for each agent we can construct the restaurants environment which is unsolvable for it, meaning that it has no chance of ever choosing B and obtaining higher reward, despite the fact that it was possible. Thus, for each possible agent we have constructed an environment which is unsolvable for it. This contradicts to the assumption of humans possessing AGI, which states that a human can solve any given task in finite time.
-
-%In case if the agent has randomness at his hand, we cannot talk about his actions as of deterministic quantities anymore. Despite all of the choices he made, he can just choose option B at any particular time, and the environment cannot be constructed as in the previous example. It means that there exist an agent which would have non-zero average visit count of restaurant B. For example, it can choose actions randomly each time. Then he would choose the action $B$ at $t_1$ in half of the cases and win.
-
-
-%On the other hand, if the randomness does not come from the environment itself, it can come from inside the agent, meaning that it is the agent who takes decisions of whether or not to explore. This case can be interpreted as a single instance of free choice. It is interpreted as follows: given two equally rewarding options to decide between, $a$ and $b$, and a action-value function \cite{sutton} $Q(s, a)=Q(s, b)$, meaning that the previous history suggests the agent that two actions are equally rewarding, the agent himself can choose which action to take, irregardless of the environment, by generating one bit using free will.
-
-%However, in the latter case the environment cannot be deterministic, since human mind is part of it, and it should be able to generate random bits. Otherwise, the same restaurant example can be constructed. Thus, in the latter case, if we assume that randomness comes from the agent itself, we must conclude that the world is not deterministic, thus, we obtain incompatibilism of free will and determinism, namely, free will holds, when determinism cannot be true.
-
-%Finally, this paper argues that the latter case is true. If the environment is the source of randomness, then an environment can be constructed which would give the exact bits to the agents that make the environment unsolvable.
+\section{Argument}
+\section{Conclusion}
 
 \begin{thebibliography}{20}
 \end{thebibliography}
